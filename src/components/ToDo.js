@@ -26,13 +26,13 @@ const ToDo = () => {
                 <input type="text" value={todo} onChange={(e)=>{setTodo(e.target.value)}} />
                 <button onClick={addTodo}>Add Todo</button>
             </div>
-            <div>
+            <ul>
                 {
-                    todoList.map((item,index)=><div key={index}>
+                    todoList.map((item,index)=><li key={index}>
                         <span>{item}</span><button onClick={()=>{removeTodo(index)}} >Delete</button>
-                    </div>)
+                    </li>)
                 }
-            </div>
+            </ul>
         </div>
     );
 };
